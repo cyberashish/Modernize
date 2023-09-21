@@ -1,0 +1,178 @@
+
+// COmponents
+@import "../css/Base";
+@import "../css/Base";
+
+
+$font-family-base: 'Plus Jakarta Sans', sans-serif;
+$border-color:#EAEFF4;
+
+$progress-height: 0.35rem;
+$progress-bg: #85a5fd;
+$progress-bar-color:#fff;
+$table-cell-padding-y: .7rem;
+$table-border-color:#DFE5EF;
+
+
+$utilities: () !default;
+$utilities : map-merge((
+   "width": (
+    property: width,
+    class: w,
+    values: (
+      25:25%,
+      18:18%,
+      20:20%,
+      50:50%,
+      60: 60%,
+      65:65%,
+      75:75%,
+      95:95%,
+      100:100%,
+      auto:auto,
+      fit:fit-content
+    )
+   ),
+   "extra-color" : (
+    property:color,
+    class:clr-text,
+    values: (
+      "alpha":#2A3547,
+      "beta":#5A6A85,
+      "gama":#7C8FAC,
+      "white":#fff,
+       "blur" : #ffffff1a
+    )
+   ),
+   "subtle-background-color": (
+    property: background-color,
+    class: bg,
+    values: (
+      "primary-subtle": #EBF3FE,
+      "success-subtle": #E6FFFA,
+      "warning-subtle": #FEF5E5,
+      "danger-subtle": #FBF2EF,
+      "light-subtle": #ffffff1a,
+    )
+  ),
+  "opacity": (
+  property: opacity,
+  values: (
+    0: 0,
+    5: .05,
+    10: .10,
+    25: .25,
+    50: .5,
+    75: .75,
+    100: 1,
+  )
+),
+  "max-width": (
+    property: max-width,
+    class: mw,
+    values: (
+      1:250px,
+      2:280px,
+      3:750px,
+      )
+  ),
+
+  "border-color-extra":(
+    property: border-color,
+    class: br,
+    values: (
+      alpha:#DFE5EF,
+    )
+  ),
+
+  "line-height-extra":(
+    property: line-height,
+    class: lht,
+    values: (
+      1:1.1,
+      2:1.2,
+      3:1.3,
+      4:1.4,
+      5:1.5
+    )
+  )
+
+),$utilities);
+
+$primary: #5D87FF;
+$secondary:#49BEFF;
+$success:#13DEB9;
+$warning:#FFAE1F;
+$danger:#FA896B;
+$light:#fff;
+$info:#ECF2FF;
+
+
+
+
+$font-sizes: (
+  1: 24px,
+  2: 21px,
+  3: 18px,
+  4: 16px,
+  5: 14px,
+  6: 12px
+);
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer * .6,
+  4: $spacer * .75,
+  5: $spacer,
+  6: $spacer * 1.2,
+  7: $spacer * 1.5,
+  8: $spacer * 1.75,
+  9: $spacer * 2,
+  10: $spacer * 2.2,
+  11: $spacer * 3,
+  12: $spacer * 3.25,
+);
+$position-values: (
+  0: 0,
+  3:3%,
+  6: 6%,
+  7:7%,
+  10: 10%,
+  13: 13%,
+  15: 15%,
+  25: 25%,
+  30: 30%,
+  50: 50%,
+  55: 55%,
+  100: 100%
+);
+
+
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+.btn-outline{
+  @include button-outline-variant(
+    $primary,
+    $color-hover: #fff,
+    $active-background: $primary,
+    $active-border: $primary,
+    $active-color: #fff,
+  );
+}
+
+
+.timeline::after{
+content: "";
+position: absolute;
+width: 1px;
+background-color: #DFE5EF;
+height: 96%;
+left: 65px;
+top: 2px;
+z-index: -1;
+}
+
